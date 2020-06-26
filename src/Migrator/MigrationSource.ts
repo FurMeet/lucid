@@ -37,7 +37,9 @@ export class MigrationSource {
       const path = isAbsolute(directoryPath) ? directoryPath : join(basePath, directoryPath)
       const files = fsReadAll(path)
       try {
-        resolve(files.sort().map((file) => {
+        resolve(files.sort((a: string, b: string) => {
+          return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+        }).map((file) => {
           return {
             absPath: join(path, file),
             name: join(directoryPath, file.replace(RegExp(`${extname(file)}$`), '')),
