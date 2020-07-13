@@ -65,6 +65,7 @@
     "@adonisjs/core": "^5.0.0-preview-rc-1.7",
     "@adonisjs/fold": "^6.3.5",
     "@adonisjs/mrm-preset": "^2.3.0",
+    "@adonisjs/sink": "^3.0.2",
     "@poppinss/dev-utils": "^1.0.6",
     "@types/dotenv": "^8.2.0",
     "@types/luxon": "^1.24.0",
@@ -118,11 +119,6 @@
   },
   "keywords": [],
   "adonisjs": {
-    "templates": {
-      "config": [
-        "database.txt"
-      ]
-    },
     "env": {
       "DB_CONNECTION": "sqlite",
       "DB_HOST": "127.0.0.1",
